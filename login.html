@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrapcss/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <section id="top">
+        <div id="logo-header">
+          <img src="assets/images/logo.png" alt="logo" class="logo" />
+        </div>
+        <div id="greet">
+          <h1>Hello coder</h1>
+          <p1>Enter your username and password</p1>
+        </div>
+      </section>
+      <br>
+      <main>
+        <form>
+            <div id="form-container">
+                <div class="form">
+                    <input type="text" id="usernameInput" placeholder="username">
+                    <br>
+                    <br>
+                    <input type="password" id="passwordInput" placeholder="password">
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-info" id="loginButton" onclick="checkpassword()">Login</button>
+                </div>
+            </div>
+        </form>
+      </main>
+    </header>
+
+    <script src="login.js"></script>
+  </body>
+</html>

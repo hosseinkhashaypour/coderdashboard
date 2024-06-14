@@ -1,0 +1,105 @@
+:root {
+  --fontirs: irs;
+  --fontbahman: bahman;
+  --fontlale: lale;
+  --fontaviny: aviny;
+  --color1: #04aa6d;
+  --color2: #6528e0;
+  --color3: rgb(7 112 112);
+  --color4: rgb(23, 240, 23);
+  --color5: #0c0025;
+  --color6: rgb(1, 1, 54);
+  --color7: #171615;
+  --color8: #1d1615;
+  --color9: #20211a;
+  --color10: #141514;
+  --color11: #0f0616;
+  --color12: #292827;
+  --bg-light: #eee;
+  --bg-dark: #444;
+  --bg-dark-2: #151515;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+@font-face {
+  font-family: irs;
+  src: url(IRANSansWeb_Bold.ttf);
+}
+
+@font-face {
+  font-family: lale;
+  src: url(Lalezar-Regular.ttf);
+}
+
+@font-face {
+  font-family: bahman;
+  src: url(Bahman\ 1.ttf);
+}
+
+@font-face {
+  font-family: aviny;
+  src: url(aviny.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: var(--bg-dark);
+}
+
+@media (min-width: 300px) {
+  #logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+  }
+  #logo-header > .logo {
+    width: 30%;
+    clip-path: circle(50%);
+    aspect-ratio: 2/2;
+  }
+  h1::after {
+    content: " !";
+  }
+  #greet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  #greet > h1 {
+    font-size: 30px;
+  }
+  #greet > p1 {
+    font-size: 20px;
+  }
+  #form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  input {
+    width: 100% !important;
+    padding: 10px 20px !important;
+    border-radius: 10px;
+    margin-right: 150px;
+  }
+  input:focus{
+    outline: none;
+    border: 2px solid var(--color2);
+  }
+  #loginButton{
+    width: 50%;
+    margin-left: 25%;
+    color: white;
+    font-weight: bold;
+  }
+}
