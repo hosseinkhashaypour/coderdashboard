@@ -35,10 +35,11 @@ themeIcon.addEventListener('click', () => {
 });
 
 
-function openNav(){
+function openNav() {
     document.getElementById("myNav").style.width = "80%"
 }
 
-function closeNav(){
+function closeNav() {
     document.getElementById("myNav").style.width = "0"
 }
+

@@ -23,6 +23,7 @@
 * {
   box-sizing: border-box;
   user-select: none;
+
 }
 @font-face {
   font-family: irs;
@@ -122,5 +123,37 @@ body {
     color: white;
     margin: 5%;
     transform: translateY(-10%);
+  }
+  #mySelf-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    margin: 5%;
+    border-radius: 10px;
+  }
+  .myself{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myself > .hkh{
+    width: 70%;
+  }
+  .social-icons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    place-content: center;
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap; */
+    margin-left: 15%;
+  }
+  .social-icons > a > img{
+    width: 50%;
   }
 }
