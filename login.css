@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  height: 100vh;
   background-color: var(--bg-dark);
 }
 
@@ -101,5 +101,44 @@ body {
     margin-left: 25%;
     color: white;
     font-weight: bold;
+  }
+  #noAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+
+/* responsive */
+@media(min-width:700px){
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #logo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo-header > .logo{
+    width: 15%;
+  }
+  #greet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #greet > h1{
+    font-size: 50px;
+  }
+  input{
+    width: 100%;
+    border: none;
+    outline: none;
   }
 }
