@@ -1,5 +1,5 @@
 let coderUsername = localStorage.getItem("coderDash")
-let greetTocoder = `Hello dear ${coderUsername}`
+let greetTocoder = `${coderUsername} Tasks`
 document.title = greetTocoder
 const menuMobile = document.querySelector(".menu-mobile")
 
@@ -14,7 +14,7 @@ function applyTheme(theme) {
         document.body.classList.add("dark-theme")
         themeIcon.src = "assets/images/light-mode.png";
         menuMobile.style.color = "white"
-        menyOverlay.style.backgroundColor = "#eee"
+        menyOverlay.style.backgroundColor = "#6528e0"
     }
     else {
         document.body.classList.remove("dark-theme")

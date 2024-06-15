@@ -30,20 +30,33 @@
   <body class="darkmode">
     <header>
         <nav>
-            <div id="nav">
-                <img src="assets/images/light-mode.png" alt="light-mode" class="light-mode">
+          <div id="nav">
+            <img src="assets/images/light-mode.png" alt="light-mode" class="light-mode">
             <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="todo.html">Tasks</a>
-            <a href="#">Services</a>
-        <a href="#">Clients</a>
-    <a href="#">Contact</a>
-</div>
-</div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menu-mobile">&#9776; </span>
-</div>
-
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="overlay-content">
+                <div class="nav-item">
+                  <img src="assets/images/home.png" alt="home" class="home">
+                  <a href="index.html" class="home">Home</a>
+                </div>
+                <div class="nav-item">
+                  <img src="assets/images/todo.png" alt="todo">
+                  <a href="todo.html">Tasks</a>
+                </div>
+                <div class="nav-item">
+                  <img src="assets/images/projects.png" alt="projects">
+                  <a href="#">Projects</a>
+                </div>
+                <div class="nav-item">
+                  <img src="assets/images/advice.png" alt="advice">
+                  <a href="https://hosseinkhashaypour.github.io/advice/">Advice</a>
+                </div>
+                <div class="nav-item">
+                </div>
+              </div>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menu-mobile">&#9776;</span>
+          </div>
         </nav>
     </header>
     <br>
@@ -67,6 +80,9 @@
         </div>
       </div>
       <br>
+      <div id="advice-iframe">
+        <iframe src="https://hosseinkhashaypour.github.io/advice/" frameborder="0" class="iframe"></iframe>
+      </div>
     </main>
 
     <script src="script.js"></script>

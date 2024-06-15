@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="todo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="darkmode">
+    <header>
+      <nav>
+        <div id="nav">
+          <img
+            src="assets/images/light-mode.png"
+            alt="light-mode"
+            class="light-mode"
+          />
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <div class="overlay-content">
+              <div class="nav-item">
+                <img src="assets/images/home.png" alt="home" class="home" />
+                <a href="index.html" class="home">Home</a>
+              </div>
+              <div class="nav-item">
+                <img src="assets/images/todo.png" alt="todo" />
+                <a href="todo.html">Tasks</a>
+              </div>
+              <div class="nav-item">
+                <img src="assets/images/projects.png" alt="projects" />
+                <a href="#">Projects</a>
+              </div>
+              <div class="nav-item">
+                <img src="assets/images/advice.png" alt="advice" />
+                <a href="https://hosseinkhashaypour.github.io/advice/"
+                  >Advice</a
+                >
+              </div>
+              <div class="nav-item"></div>
+            </div>
+          </div>
+          <span
+            style="font-size: 30px; cursor: pointer"
+            onclick="openNav()"
+            class="menu-mobile"
+            >&#9776;</span
+          >
+        </div>
+      </nav>
+    </header>
+    <br />
+    <main>
+      <div id="todoInput-container">
+        <div class="todoInput">
+          <form>
+            <input type="text" id="todoInput" placeholder="Add Task" />
+            <br>
+            <br>
+            <button id="enterBtn" onclick="makeLi()">Add Task</button>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div id="todos">
+        <ul>
+        </ul>
+      </div>
+    </main>
+    <script src="todo.js"></script>
+  </body>
+</html>
