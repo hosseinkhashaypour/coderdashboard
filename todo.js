@@ -1,6 +1,7 @@
 let coderUsername = localStorage.getItem("coderDash")
-let greetTocoder = `Hello dear ${coderUsername}`
+const greetTocoder = `${coderUsername}'s Tasks`
 document.title = greetTocoder
+
 const menuMobile = document.querySelector(".menu-mobile")
 
 const themeIcon = document.querySelector(".light-mode")
@@ -61,17 +62,28 @@ function makeLi(event) {
     Lis.textContent = textInput; // تنظیم مقدار ورودی به عنوان متن li
     
     // ایجاد دکمه سطل زباله
-    const deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = '<img src="assets/images/delete.png" alt="delete" class="delete">';
-    deleteBtn.classList.add("delete-btn");
-    
-
-    deleteBtn.addEventListener("click", function() {
-      removeTodoFromStorage(Lis.textContent); // حذف وظیفه از Local Storage
-      Lis.remove(); 
-    });
+      // ایجاد دکمه سطل زباله
+      const deleteBtn = document.createElement("button");
+      const doneBtn = document.createElement("button")
+      doneBtn.innerHTML = '<img src="assets/images/done.png" alt="delete" class="done">';
+  
+      deleteBtn.innerHTML = '<img src="assets/images/delete.png" alt="delete" class="delete">';
+      // deleteBtn.innerHTML = '<img src="assets/images/delete.png" alt="delete" class="delete">';
+      deleteBtn.classList.add("delete");
+      doneBtn.classList.add("done")
+      // اضافه کردن رویداد کلیک به دکمه سطل زباله
+      deleteBtn.addEventListener("click", function() {
+        removeTodoFromStorage(Lis.textContent); // حذف وظیفه از Local Storage
+        Lis.remove(); // حذف وظیفه از DOM
+      });
+      doneBtn.addEventListener("click" , function(){
+        removeTodoFromStorage(Lis.textContent); // حذف وظیفه از Local Storage
+        Lis.remove(); 
+      })
+      
     
     Lis.appendChild(deleteBtn); // افزودن دکمه به li
+    Lis.appendChild(doneBtn)
     document.querySelector("#todos ul").appendChild(Lis); // افزودن li به ul
     
     // ذخیره وظیفه در Local Storage
@@ -105,16 +117,25 @@ function loadTodos() {
     
     // ایجاد دکمه سطل زباله
     const deleteBtn = document.createElement("button");
+    const doneBtn = document.createElement("button")
+    doneBtn.innerHTML = '<img src="assets/images/done.png" alt="delete" class="done">';
+
     deleteBtn.innerHTML = '<img src="assets/images/delete.png" alt="delete" class="delete">';
-    deleteBtn.classList.add("delete-btn");
-    
+    // deleteBtn.innerHTML = '<img src="assets/images/delete.png" alt="delete" class="delete">';
+    deleteBtn.classList.add("delete");
+    doneBtn.classList.add("done")
     // اضافه کردن رویداد کلیک به دکمه سطل زباله
     deleteBtn.addEventListener("click", function() {
       removeTodoFromStorage(Lis.textContent); // حذف وظیفه از Local Storage
       Lis.remove(); // حذف وظیفه از DOM
     });
+    doneBtn.addEventListener("click" , function(){
+      removeTodoFromStorage(Lis.textContent); // حذف وظیفه از Local Storage
+      Lis.remove(); 
+    })
     
     Lis.appendChild(deleteBtn); // افزودن دکمه به li
+    Lis.appendChild(doneBtn)
     document.querySelector("#todos ul").appendChild(Lis); // افزودن li به ul
   });
 }

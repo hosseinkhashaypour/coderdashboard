@@ -187,22 +187,23 @@ body {
   
   li {
     display: flex;
-    justify-content: space-between; /* قرار دادن آیتم‌ها در دو طرف لی */
+    justify-content: space-evenly; /* قرار دادن آیتم‌ها در دو طرف لی */
     align-items: center;
     background-color: var(--bg-light);
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
   }
-  .delete {
+  .delete , .done{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 15%;
+    width: 35%;
     /* right: 50%; */
     background-color: transparent !important;
     background: none !important;
     color: none;
-  }
+    /* transform: translateX(550%); */
+  } 
 }
 
